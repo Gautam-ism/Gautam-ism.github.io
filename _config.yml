@@ -24,19 +24,21 @@ repository               : "Gautam-ism/Gautam-ism.github.io"
 author:
   # Biographic information
   author:
+author:
   name             : "Gaurav Kumar Gautam"
   avatar           : "profile.png"
   bio              : "Geospatial AI Researcher · Prospective PhD Student, Fall 2027"
   location         : "Dhanbad, India"
   employer         : "IIT (ISM) Dhanbad"
-  pubmed           :
+  pubmed           : ""
   googlescholar    : "https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en"
   email            : "gauravapgautam@gmail.com"
-  researchgate     :
+  researchgate     : ""
   github           : "Gautam-ism"
-  twitter          :
+  twitter          : ""
   linkedin         : "gaukrgau"
   orcid            : "https://orcid.org/0009-0000-3032-1479"
+  bluesky          : ""
  
   # Academic websites
   academia         : # URL
