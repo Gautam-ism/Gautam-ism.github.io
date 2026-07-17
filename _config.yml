@@ -4,7 +4,7 @@
 
 locale                   : "en-US"
 title                    : "Gaurav Kumar Gautam"
-title_separator          : "-"
+title_separator          : "|"
 name                     : &name "Gaurav Kumar Gautam"
 description              : &description "Geospatial AI Researcher · Prospective PhD Student, Fall 2027. Remote sensing, InSAR deformation monitoring, and generative models for geohazard assessment and mining-environment monitoring."
 url                      : "https://gautam-ism.github.io"
@@ -17,22 +17,22 @@ future                   : true
 read_more                : "disabled"
 talkmap_link             : false
 
-# SEO Related
+# SEO
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-# Social Sharing
+# Social sharing
 twitter:
   username               :
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "profile.png"
+og_image                 : "/images/profile.png"
 
-# For specifying social profiles
+# Social profiles
 social:
   type                   : Person
   name                   : *name
@@ -42,34 +42,24 @@ social:
     - "https://github.com/Gautam-ism"
     - "https://www.linkedin.com/in/gaukrgau"
 
-# Analytics
 analytics:
   provider               : false
 
 # -----------------------------------------------------------------------------
-# Site Author
+# Site Author — Only include keys that should render in sidebar
+# (Empty keys are truthy in Liquid — omit them entirely instead)
 # -----------------------------------------------------------------------------
 author:
   avatar           : "profile.png"
   name             : "Gaurav Kumar Gautam"
-  pronouns         :
   bio              : "Geospatial AI Researcher · Prospective PhD Student, Fall 2027"
   location         : "Dhanbad, India"
   employer         : "IIT (ISM) Dhanbad"
-  uri              :
   email            : "gauravapgautam@gmail.com"
   googlescholar    : "https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en"
   orcid            : "https://orcid.org/0009-0000-3032-1479"
   github           : "Gautam-ism"
   linkedin         : "gaukrgau"
-  pubmed           : ""
-  researchgate     : ""
-  twitter          : ""
-  bluesky          : ""
-  facebook         : ""
-  telegram         : ""
-  wikipedia        : ""
-  osf              : ""
 
 # -----------------------------------------------------------------------------
 # Reading Files
@@ -114,9 +104,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# -----------------------------------------------------------------------------
-# Markdown Processing
-# -----------------------------------------------------------------------------
 kramdown:
   input: GFM
   hard_wrap: false
@@ -127,24 +114,15 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# -----------------------------------------------------------------------------
-# Sass/SCSS
-# -----------------------------------------------------------------------------
 sass:
   sass_dir: _sass
   style: compressed
 
-# -----------------------------------------------------------------------------
-# Outputting
-# -----------------------------------------------------------------------------
 permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 timezone: Asia/Kolkata
 
-# -----------------------------------------------------------------------------
-# Plugins
-# -----------------------------------------------------------------------------
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -152,7 +130,6 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-# mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
   - jekyll-gist
@@ -160,9 +137,6 @@ whitelist:
   - jekyll-sitemap
   - jemoji
 
-# -----------------------------------------------------------------------------
-# Archives
-# -----------------------------------------------------------------------------
 category_archive:
   type: liquid
   path: /categories/
@@ -170,17 +144,11 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# -----------------------------------------------------------------------------
-# HTML Compression
-# -----------------------------------------------------------------------------
 compress_html:
   clippings: all
   ignore:
     envs: development
 
-# -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
 collections:
   teaching:
     output: true
@@ -195,11 +163,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# -----------------------------------------------------------------------------
-# Defaults
-# -----------------------------------------------------------------------------
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -210,14 +174,12 @@ defaults:
       comments: false
       share: true
       related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _publications
   - scope:
       path: ""
       type: publications
@@ -226,7 +188,6 @@ defaults:
       author_profile: true
       share: false
       comments: false
-  # _portfolio
   - scope:
       path: ""
       type: portfolio
@@ -235,7 +196,6 @@ defaults:
       author_profile: false
       share: false
       comment: false
-  # _talks
   - scope:
       path: ""
       type: talks
@@ -243,7 +203,6 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-  # _teaching
   - scope:
       path: ""
       type: teaching
@@ -253,9 +212,6 @@ defaults:
       share: true
       comments: false
 
-# -----------------------------------------------------------------------------
-# Site Footer
-# -----------------------------------------------------------------------------
 footer:
   links:
     - label: "GitHub"
