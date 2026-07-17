@@ -5,7 +5,11 @@ permalink: /cv/
 author_profile: true
 ---
 
-<a href="/files/Gaurav_Kumar_Gautam_CV.pdf" class="btn btn--info" download>📄 Download CV (PDF)</a>
+<p class="section-intro">
+Below is the full CV. For a printable copy, use the button below.
+</p>
+
+<a href="{{ site.baseurl }}/files/Gaurav_Kumar_Gautam_CV.pdf" class="btn" download>📄 Download CV (PDF)</a>
 
 ---
 

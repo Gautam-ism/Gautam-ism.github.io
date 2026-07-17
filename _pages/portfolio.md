@@ -5,75 +5,68 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-My research develops **Earth-observation and AI methods** to answer four interconnected questions: *Where will the ground fail? How is it moving now? Where should we heal it first? And what resources lie beneath?*
+<p class="section-intro">
+My research develops <strong>Earth-observation and AI methods</strong> to answer four interconnected questions: <em>Where will the ground fail? How is it moving now? Where should we heal it first? And what resources lie beneath?</em>
+</p>
 
----
+<div class="thread">
+  <div class="thread-body">
+    <span class="thread-tag">Thread 1 · GeoAI</span>
+    <h3>Geospatial AI for Landslide Susceptibility</h3>
+    <div class="thread-meta">Sikkim Himalaya · 2024 – present</div>
+    <p>A three-phase investigation of landslide susceptibility in the tectonically active Sikkim Himalaya.</p>
+    <p><strong>Phase 1</strong> developed GIS-based zonation using parameterized AHP with 14 predictor layers and 672 landslide points. <strong>Phase 2</strong> benchmarked AHP, Frequency Ratio, Logistic Regression, and hybrid models. <strong>Phase 3</strong> evaluated ensemble machine-learning algorithms (XGBoost and Weighted Subspace Random Forest) under 5-fold spatial cross-validation.</p>
+    <p><strong>Result:</strong> XGBoost achieved the highest discrimination (<strong>AUC = 0.895</strong>). Partial dependence analysis identified a critical slope-instability transition between 25° and 30°, aligning with geomorphological friction theory.</p>
+    <p><strong>Extension — GCT-TabDDPM.</strong> A Geo-Conditional Transformer coupled with a Tabular Denoising Diffusion Probabilistic Model, under ten domain-specific geomechanical constraints, to address chronic data scarcity in geohazard modeling. Manuscript in preparation for the <em>International Journal of Disaster Risk Reduction</em>.</p>
+  </div>
+  <div class="thread-figure">
+    <img src="/images/research/01_landslide_susceptibility.png" alt="Landslide susceptibility map, Sikkim">
+  </div>
+</div>
 
-## 1. Geospatial AI for Landslide Susceptibility
+<div class="thread reverse">
+  <div class="thread-body">
+    <span class="thread-tag">Thread 2 · InSAR</span>
+    <h3>Multi-Temporal InSAR Deformation Monitoring</h3>
+    <div class="thread-meta">Gangtok, Sikkim · Mar 2026 – present</div>
+    <p>Multi-temporal InSAR characterization of ground-surface deformation across the Gangtok region, addressing the lack of pixel-scale monitoring in vegetated Himalayan urban centers.</p>
+    <p><strong>Data &amp; pipeline.</strong> A full year of Sentinel-1A ascending and descending acquisitions (55 scenes) processed through the ISCE2/MintPy pipeline, applying both SBAS and Persistent Scatterer InSAR to generate 200 interferometric pairs and approximately <strong>10 million coherent pixels</strong>.</p>
+    <p><strong>Method.</strong> Joint inversion decomposed line-of-sight displacement into horizontal and vertical components, resolving the 3D kinematics of active slow-moving landslides.</p>
+    <p><strong>Result.</strong> Time-series analysis showed a <strong>three- to five-fold increase in speed during the June–September monsoon</strong>, providing quantitative evidence that pore-pressure increase from rainfall drives slope instability. Manuscript ready for submission.</p>
+  </div>
+  <div class="thread-figure">
+    <img src="/images/research/02_insar_timeseries.png" alt="InSAR displacement time series, Gangtok">
+  </div>
+</div>
 
-*Sikkim Himalaya · 2024 – present*
+<div class="thread">
+  <div class="thread-body">
+    <span class="thread-tag">Thread 3 · M.Tech Thesis</span>
+    <h3>Mining-Environment Monitoring &amp; Restoration Prioritization</h3>
+    <div class="thread-meta">Jharia Coalfield, India · Jan 2025 – Apr 2026 · Supervisor: <a href="https://www.iitism.ac.in/">Prof. Dheeraj Kumar</a></div>
+    <p>The first integrated decadal restoration prioritization framework for the Jharia Coalfield — a ~370 km² landscape affected by a century of mining and persistent underground coal-seam fires.</p>
+    <p><strong>Data fusion.</strong> Six degradation indicators from a ten-year archive (Sentinel-1/2, Landsat-8/9, VIIRS), integrated via Theil–Sen slope estimation with Mann–Kendall significance.</p>
+    <p><strong>Novel indices.</strong> <em>Vol-NDVI</em> — a SAR–optical fusion index distinguishing structural vegetation from ephemeral grasses. <em>Surface Alteration Stress</em> — quantifying anthropogenic mining pressure.</p>
+    <p><strong>Method.</strong> Fuzzy AHP weighting with VIF multicollinearity control, followed by U-Net segmentation (GeoAI) to identify restoration target areas.</p>
+    <p><strong>Validation.</strong> Moran's I = <strong>0.8831</strong> · ROC–AUC = <strong>0.8355</strong> · Monte Carlo CV = <strong>2.56%</strong> · <strong>77.48%</strong> capture of independently mapped coal-fire areas.</p>
+    <p><strong>Impact.</strong> A 10-meter-resolution map for reclamation planners identifying where restoration is most urgent, and why. Manuscript submitted to <em>Science of Remote Sensing</em> (Elsevier); code and data openly archived on GitHub.</p>
+  </div>
+  <div class="thread-figure">
+    <img src="/images/research/03_jharia_restoration.png" alt="Jharia restoration priority index">
+  </div>
+</div>
 
-A three-phase investigation of landslide susceptibility in the tectonically active Sikkim Himalaya.
-
-**Phase 1** developed GIS-based zonation using parameterized AHP, integrating 14 predictor layers and 672 landslide points. **Phase 2** benchmarked AHP, Frequency Ratio, Logistic Regression, and hybrid models. **Phase 3** evaluated ensemble machine-learning algorithms (XGBoost and Weighted Subspace Random Forest) under 5-fold spatial cross-validation.
-
-**Result:** XGBoost achieved the highest discrimination (AUC = 0.895). Partial dependence analysis identified a critical slope-instability transition between 25° and 30°, which aligns with geomorphological friction theory.
-
-**Extension — GCT-TabDDPM** *(Apr 2026 – present).* A Geo-Conditional Transformer coupled with a Tabular Denoising Diffusion Probabilistic Model, developed under ten domain-specific geomechanical constraints, to address chronic data scarcity in geohazard modeling. The framework generates statistically faithful synthetic samples to overcome class imbalance and spatial bias. Manuscript in preparation for the *International Journal of Disaster Risk Reduction*.
-
-*Outputs:* [Peer-reviewed paper (ESPL, 2026)](/publications/) · Manuscript under review · GCT-TabDDPM manuscript in preparation
-
----
-
-## 2. Multi-Temporal InSAR Deformation Monitoring
-
-*Gangtok, Sikkim · Mar 2026 – present*
-
-A multi-temporal InSAR characterization of ground-surface deformation across the Gangtok region, addressing the lack of pixel-scale monitoring in vegetated Himalayan urban centers.
-
-**Data & pipeline.** A full year of Sentinel-1A ascending and descending acquisitions (55 scenes) processed through the ISCE2/MintPy pipeline, applying both SBAS and Persistent Scatterer InSAR to generate 200 interferometric pairs and approximately 10 million coherent pixels.
-
-**Method.** Joint inversion decomposed line-of-sight displacement into horizontal and vertical components, resolving the 3D kinematics of active slow-moving landslides.
-
-**Result.** Time-series analysis showed a **three- to five-fold increase in speed during the June–September monsoon**, providing quantitative evidence that pore-pressure increase from rainfall drives slope instability.
-
-*Outputs:* Manuscript ready for submission.
-
----
-
-## 3. Mining-Environment Monitoring and Restoration Prioritization
-
-*Jharia Coalfield, India · Jan 2025 – Apr 2026 · M.Tech Thesis*
-
-The first integrated decadal restoration prioritization framework for the Jharia Coalfield — a ~370 km² landscape affected by a century of mining and persistent underground coal-seam fires.
-
-**Data fusion.** Six degradation indicators from a ten-year satellite archive (Sentinel-1/2, Landsat-8/9, VIIRS), integrated via Theil–Sen slope estimation with Mann–Kendall significance.
-
-**Novel indices.** Two new indices developed for this framework:
-- *Vol-NDVI* — a SAR–optical fusion index distinguishing structural vegetation from ephemeral grasses.
-- *Surface Alteration Stress* — quantifying anthropogenic mining pressure.
-
-**Method.** Fuzzy AHP weighting with VIF multicollinearity control, followed by U-Net segmentation (GeoAI) to identify restoration target areas.
-
-**Validation.** The resulting Restoration Priority Index was validated across four independent dimensions:
-- Moran's I = **0.8831** (strong spatial coherence)
-- ROC–AUC = **0.8355** (predictive discrimination)
-- Monte Carlo CV = **2.56%** (sensitivity robustness)
-- **77.48%** capture of independently mapped coal-fire areas
-
-**Impact.** A 10-meter-resolution map for reclamation planners identifying where restoration is most urgent, and why.
-
-*Outputs:* Manuscript submitted to *Science of Remote Sensing* (Elsevier) · Code and data openly archived on GitHub.
-
-*Supervisor: [Prof. Dheeraj Kumar](https://www.iitism.ac.in/), Dept. of Mining Engineering, IIT (ISM) Dhanbad.*
-
----
-
-## 4. Hyperspectral Mineral Mapping
-
-*Bailadila Iron Ore Mine · Summer 2025 · Independent research*
-
-An EO-1 Hyperion processing workflow in ENVI (FLAASH atmospheric correction, PCA/MNF dimensionality reduction, Spectral Angle Mapper classification) to map hematite, pyrite, and quartz-associated minerals — extending methodological breadth in spaceborne spectroscopy toward resource exploration.
+<div class="thread reverse">
+  <div class="thread-body">
+    <span class="thread-tag">Thread 4 · Spectroscopy</span>
+    <h3>Hyperspectral Mineral Mapping</h3>
+    <div class="thread-meta">Bailadila Iron Ore Mine · Summer 2025 · Independent research</div>
+    <p>An EO-1 Hyperion processing workflow in ENVI (FLAASH atmospheric correction, PCA/MNF dimensionality reduction, Spectral Angle Mapper classification) to map hematite, pyrite, and quartz-associated minerals — extending methodological breadth in spaceborne spectroscopy toward resource exploration.</p>
+  </div>
+  <div class="thread-figure">
+    <img src="/images/research/04_hyperspectral.png" alt="Hyperspectral mineral signatures, Bailadila">
+  </div>
+</div>
 
 ---
 
