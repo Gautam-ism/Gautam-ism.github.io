@@ -1,6 +1,6 @@
 # Gaurav Kumar Gautam - Academic Portfolio
 
-Source for my academic portfolio website: **https://gaurav-gautam.github.io/**
+Source for my academic portfolio website: **https://gautam-ism.github.io/**
 
 The site presents my research in Geospatial AI, Earth observation, InSAR, geohazards, and mining-environment applications, together with publications and curriculum vitae.
 

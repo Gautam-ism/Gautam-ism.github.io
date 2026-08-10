@@ -6,9 +6,9 @@ title                    : "Gaurav Kumar Gautam"
 title_separator          : "|"
 name                     : &name "Gaurav Kumar Gautam"
 description              : &description "Geospatial AI and Earth observation researcher working on InSAR, spatial modelling, geohazards, and mining-environment applications."
-url                      : "https://gaurav-gautam.github.io"
+url                      : "https://gautam-ism.github.io"
 baseurl                  : ""
-repository               : "gaurav-gautam/gaurav-gautam.github.io"
+repository               : "Gautam-ism/Gautam-ism.github.io"
 teaser                   :
 breadcrumbs              : false
 words_per_minute         : 160
@@ -36,7 +36,7 @@ social:
   links:
     - "https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en"
     - "https://orcid.org/0009-0000-3032-1479"
-    - "https://github.com/gaurav-gautam"
+    - "https://github.com/Gautam-ism"
     - "https://www.linkedin.com/in/gaukrgau"
 
 analytics:
@@ -54,7 +54,7 @@ author:
   email            : "gaukrgau@gmail.com"
   googlescholar    : "https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en"
   orcid            : "https://orcid.org/0009-0000-3032-1479"
-  github           : "gaurav-gautam"
+  github           : "Gautam-ism"
   linkedin         : "gaukrgau"
 
 # -----------------------------------------------------------------------------
@@ -152,7 +152,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/gaurav-gautam"
+      url: "https://github.com/Gautam-ism"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/gaukrgau"
@@ -164,4 +164,4 @@ footer:
       url: "https://orcid.org/0009-0000-3032-1479"
 
 copyright                : "Gaurav Kumar Gautam"
-copyright_url            : "https://gaurav-gautam.github.io"
+copyright_url            : "https://gautam-ism.github.io"

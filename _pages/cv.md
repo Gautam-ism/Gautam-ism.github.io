@@ -118,6 +118,6 @@ See the [Publications page](/publications/) for full citations and current statu
 
 ## Academic Profiles
 
-[Google Scholar](https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en) · [ORCID](https://orcid.org/0009-0000-3032-1479) · [GitHub](https://github.com/gaurav-gautam) · [LinkedIn](https://www.linkedin.com/in/gaukrgau)
+[Google Scholar](https://scholar.google.com/citations?user=4chg1EwAAAAJ&hl=en) · [ORCID](https://orcid.org/0009-0000-3032-1479) · [GitHub](https://github.com/Gautam-ism) · [LinkedIn](https://www.linkedin.com/in/gaukrgau)
 
 <small>Referee details are provided directly in formal applications rather than published on this public website.</small>
