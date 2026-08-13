@@ -10,7 +10,7 @@ url                      : "https://gautam-ism.github.io"
 baseurl                  : ""
 repository               : "Gautam-ism/Gautam-ism.github.io"
 teaser                   :
-og_image                 : "profile-field.webp"
+og_image                 : "profile-field-hq.jpg"
 breadcrumbs              : false
 words_per_minute         : 160
 future                   : false
@@ -48,7 +48,7 @@ analytics:
 # -----------------------------------------------------------------------------
 author:
   name             : "Gaurav Kumar Gautam"
-  avatar           : "profile-field.webp"
+  avatar           : "profile-field-hq.jpg"
   bio              : "Geospatial AI & Earth Observation Researcher"
   location         : "Dhanbad, India"
   employer         : "IIT (ISM) Dhanbad"
