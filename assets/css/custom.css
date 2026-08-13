@@ -117,3 +117,96 @@ blockquote {
   .masthead, .sidebar, .page__footer, .btn, .home-actions { display: none !important; }
   .page__content { max-width: 100%; font-size: 10pt; }
 }
+
+
+/* Research figures and metrics */
+.research-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1.1rem 0 1.55rem;
+}
+.research-metrics--compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.research-metrics > div {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fbfcfb;
+  padding: 0.75rem 0.85rem;
+  text-align: center;
+}
+.research-metrics strong {
+  display: block;
+  color: var(--accent-dark);
+  font-size: 1.08em;
+  line-height: 1.2;
+}
+.research-metrics span {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.22rem;
+  font-size: 0.82em;
+  line-height: 1.35;
+}
+
+.research-figure {
+  margin: 1.35rem auto 1.8rem;
+  max-width: 880px;
+}
+.research-figure--wide {
+  max-width: 1040px;
+}
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(31, 64, 41, 0.06);
+}
+.research-figure figcaption {
+  color: var(--muted);
+  font-size: 0.84em;
+  line-height: 1.5;
+  margin: 0.55rem 0.25rem 0;
+}
+.research-figure figcaption strong {
+  color: #46514a;
+}
+
+/* Field-context profile portrait */
+.sidebar .author__avatar img,
+.author__avatar img {
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #e2e9e3;
+  box-shadow: 0 3px 14px rgba(31, 64, 41, 0.10);
+}
+
+@media (max-width: 760px) {
+  .research-metrics,
+  .research-metrics--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .research-figure,
+  .research-figure--wide {
+    margin: 1rem 0 1.45rem;
+  }
+  .research-figure figcaption {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 440px) {
+  .research-metrics,
+  .research-metrics--compact {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .research-metrics > div {
+    padding: 0.62rem 0.5rem;
+  }
+}
