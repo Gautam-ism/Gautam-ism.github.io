@@ -2,244 +2,218 @@
 layout: archive
 title: "Research"
 permalink: /portfolio/
-author_profile: true
+author_profile: false
+classes:
+  - wide
+  - research-v2-page
 ---
 
-My research centers on **Geospatial AI and Earth observation for geohazards and Earth-surface/environmental processes**. Across projects, I work with InSAR time series, multi-source satellite data, spatial statistics, and machine learning, with an emphasis on methods that remain physically and geographically meaningful.
+<section class="page-hero-v2">
+  <p class="eyebrow-v2">RESEARCH</p>
+  <h1>Geospatial AI and Earth observation for changing landscapes.</h1>
+  <p>My work connects <strong>susceptibility modelling, spatially rigorous machine learning, multi-source remote sensing, and InSAR deformation monitoring</strong>. The recurring question is not only where environmental or geohazard risk is high, but whether our models remain geographically meaningful and correspond to physical change on the ground.</p>
+</section>
 
----
+<nav class="research-nav-v2" aria-label="Research areas">
+  <a href="#sikkim-landslides"><span>01</span>Sikkim landslides</a>
+  <a href="#gangtok-insar"><span>02</span>Gangtok InSAR</a>
+  <a href="#geoai-synthetic-data"><span>03</span>GeoAI methods</a>
+  <a href="#jharia-restoration"><span>04</span>Jharia restoration</a>
+  <a href="#other-earth-observation"><span>05</span>Other EO research</a>
+</nav>
 
-## Sikkim Landslide Research Program
+<section class="research-program-v2" id="sikkim-landslides">
+  <header class="research-program-v2__header">
+    <div>
+      <p class="eyebrow-v2">SIKKIM HIMALAYA · 2024 — PRESENT</p>
+      <h2>Sikkim Landslide Research Program</h2>
+    </div>
+    <p>A connected progression from static susceptibility mapping to spatially validated ensemble learning, forming the modelling foundation for later deformation monitoring.</p>
+  </header>
 
-*Sikkim Himalaya · 2024 - present*
+  <div class="research-timeline-v2">
+    <div><span>01</span><strong>Knowledge-driven</strong><small>AHP · GIS-MCDM</small></div>
+    <div><span>02</span><strong>Hybrid models</strong><small>AHP-FR · LR · FR</small></div>
+    <div><span>03</span><strong>Ensemble ML</strong><small>XGBoost · WSRF · spatial CV</small></div>
+    <div><span>04</span><strong>Dynamic monitoring</strong><small>PSInSAR · SBAS</small></div>
+  </div>
 
-This work has developed as a connected progression from static susceptibility mapping to spatially rigorous machine learning and dynamic deformation monitoring.
+  <div class="research-stage-v2">
+    <div class="research-stage-v2__label"><span>Stage 1–2</span><h3>From AHP to hybrid susceptibility modelling</h3></div>
+    <div class="research-stage-v2__content">
+      <p>A GIS-MCDM framework integrated <strong>14 geo-environmental conditioning factors</strong> after multicollinearity assessment. The initial AHP model achieved <strong>AUC = 0.844</strong>, with slope identified as the most influential factor.</p>
+      <p>A subsequent study compared <strong>AHP, Frequency Ratio, AHP-FR, and Logistic Regression</strong> using an inventory of <strong>211 landslides</strong>. The hybrid AHP-FR model achieved the strongest overall performance, with <strong>success AUC = 0.85</strong>, <strong>prediction AUC = 0.81</strong>, and sensitivity of <strong>0.79</strong>.</p>
+    </div>
+  </div>
 
-### 1. Knowledge-driven susceptibility modelling
-A GIS-MCDM framework integrated **14 geo-environmental conditioning factors** after multicollinearity assessment and used the Analytic Hierarchy Process (AHP) to delineate landslide susceptibility across Sikkim. Sensitivity analysis identified slope as the most influential factor, and the model achieved **AUC = 0.844**.
+  <div class="research-metrics" aria-label="Published landslide study metrics">
+    <div><strong>211</strong><span>mapped landslides</span></div>
+    <div><strong>14</strong><span>conditioning factors</span></div>
+    <div><strong>0.85</strong><span>success AUC</span></div>
+    <div><strong>0.81</strong><span>prediction AUC</span></div>
+  </div>
 
-### 2. Deterministic, statistical, and hybrid model comparison
-A subsequent study compared **AHP, Frequency Ratio, AHP-FR, and Logistic Regression** using an inventory of **211 landslides**. The hybrid AHP-FR model achieved the strongest overall predictive performance (**success AUC = 0.85; prediction AUC = 0.81**), with sensitivity of **0.79** and strong spatial reliability.
-
-<div class="research-metrics" aria-label="Published landslide study metrics">
-  <div><strong>211</strong><span>mapped landslides</span></div>
-  <div><strong>14</strong><span>conditioning factors</span></div>
-  <div><strong>0.85</strong><span>success AUC</span></div>
-  <div><strong>0.81</strong><span>prediction AUC</span></div>
-</div>
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/sikkim-inventory-field.png" target="_blank" rel="noopener">
-    <img src="/images/research/sikkim-inventory-field.png" alt="Sikkim landslide inventory map flanked by two field-observed landslides" width="2068" height="1477" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Landslide inventory and field assessment in Sikkim.</strong> Spatially mapped landslide occurrences were combined with imagery- and field-based verification to develop and validate susceptibility models across the Himalayan terrain. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
-**Output:** Peer-reviewed article in *Earth Surface Processes and Landforms* (2026). [See Publications →](/publications/)
-
-### 3. Ensemble learning with spatial validation
-The next stage benchmarked **Logistic Regression, Random Forest, Weighted Subspace Random Forest (WSRF), and XGBoost** using **677 landslides** and **five-fold spatial cross-validation**. XGBoost achieved the highest discriminative capability (**AUC = 0.895; sensitivity = 0.955**), while WSRF provided better zonation efficiency, capturing **84.5% of landslides within 28.2% of the study area**. Partial-dependence analysis identified a pronounced instability transition around **25°-30° slope**.
-
-<div class="research-metrics" aria-label="Ensemble landslide modelling metrics">
-  <div><strong>677</strong><span>landslides</span></div>
-  <div><strong>0.895</strong><span>XGBoost AUC</span></div>
-  <div><strong>0.955</strong><span>XGBoost sensitivity</span></div>
-  <div><strong>3.00</strong><span>WSRF frequency ratio</span></div>
-</div>
-
-<div class="research-pair" aria-label="XGBoost and WSRF landslide susceptibility maps">
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/sikkim-xgboost.jpg" target="_blank" rel="noopener">
-      <img src="/images/research/sikkim-xgboost.jpg" alt="XGBoost landslide susceptibility zonation map for Sikkim" width="1039" height="779" loading="lazy" decoding="async">
+  <figure class="research-figure research-figure--wide">
+    <a class="research-figure__link" href="/images/research/sikkim-inventory-field.png" target="_blank" rel="noopener">
+      <img src="/images/research/sikkim-inventory-field.png" alt="Sikkim landslide inventory map flanked by two field-observed landslides" loading="lazy" decoding="async">
     </a>
-    <figcaption><strong>XGBoost susceptibility zonation.</strong> Highest overall predictive discrimination. <span class="figure-hint">Open full resolution ↗</span></figcaption>
+    <figcaption><strong>Landslide inventory and field assessment.</strong> Spatially mapped landslide occurrences were combined with imagery- and field-based verification for model development and validation. <span class="figure-hint">Open full resolution ↗</span></figcaption>
   </figure>
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/sikkim-wsrf.jpg" target="_blank" rel="noopener">
-      <img src="/images/research/sikkim-wsrf.jpg" alt="WSRF landslide susceptibility zonation map for Sikkim" width="1039" height="779" loading="lazy" decoding="async">
-    </a>
-    <figcaption><strong>WSRF susceptibility zonation.</strong> Better spatial economy in the Very High class. <span class="figure-hint">Open full resolution ↗</span></figcaption>
+
+  <div class="output-strip-v2"><span class="status-pill-v2 status-pill-v2--published">Published</span><p>Peer-reviewed article in <em>Earth Surface Processes and Landforms</em> (2026).</p><a href="/publications/">Publication record →</a></div>
+
+  <div class="research-stage-v2 research-stage-v2--accent">
+    <div class="research-stage-v2__label"><span>Stage 3</span><h3>Ensemble learning with spatial validation</h3></div>
+    <div class="research-stage-v2__content">
+      <p>The latest modelling stage benchmarks <strong>Logistic Regression, Random Forest, Weighted Subspace Random Forest (WSRF), and XGBoost</strong> using <strong>677 landslides</strong> and <strong>five-fold spatial cross-validation</strong>.</p>
+      <p>XGBoost provides the highest discrimination (<strong>AUC = 0.895; sensitivity = 0.955</strong>), while WSRF offers stronger zonation efficiency by concentrating <strong>84.5% of landslides within 28.2% of the study area</strong>. This explicitly separates predictive accuracy from operational spatial economy.</p>
+    </div>
+  </div>
+
+  <div class="research-metrics" aria-label="Ensemble landslide modelling metrics">
+    <div><strong>677</strong><span>landslides</span></div>
+    <div><strong>0.895</strong><span>XGBoost AUC</span></div>
+    <div><strong>0.955</strong><span>XGBoost sensitivity</span></div>
+    <div><strong>3.00</strong><span>WSRF frequency ratio</span></div>
+  </div>
+
+  <div class="research-pair" aria-label="XGBoost and WSRF landslide susceptibility maps">
+    <figure class="research-figure research-figure--panel">
+      <a class="research-figure__link" href="/images/research/sikkim-xgboost.jpg" target="_blank" rel="noopener"><img src="/images/research/sikkim-xgboost.jpg" alt="XGBoost landslide susceptibility zonation map for Sikkim" loading="lazy"></a>
+      <figcaption><strong>XGBoost.</strong> Strongest predictive discrimination. <span class="figure-hint">Full resolution ↗</span></figcaption>
+    </figure>
+    <figure class="research-figure research-figure--panel">
+      <a class="research-figure__link" href="/images/research/sikkim-wsrf.jpg" target="_blank" rel="noopener"><img src="/images/research/sikkim-wsrf.jpg" alt="WSRF landslide susceptibility zonation map for Sikkim" loading="lazy"></a>
+      <figcaption><strong>WSRF.</strong> Greater spatial economy in the Very High class. <span class="figure-hint">Full resolution ↗</span></figcaption>
+    </figure>
+  </div>
+
+  <figure class="research-figure research-figure--wide">
+    <a class="research-figure__link" href="/images/research/sikkim-zonation-comparison.png" target="_blank" rel="noopener"><img src="/images/research/sikkim-zonation-comparison.png" alt="Quantitative comparison of landslide susceptibility model zonation efficiency" loading="lazy"></a>
+    <figcaption><strong>Model zonation efficiency.</strong> Landscape area, landslide concentration, and frequency ratio reveal why operational usefulness cannot be judged from AUC alone. <span class="figure-hint">Open full resolution ↗</span></figcaption>
   </figure>
-</div>
-<p class="research-pair-caption"><strong>Contrasting susceptibility zonation.</strong> XGBoost provides the strongest predictive discrimination, whereas WSRF concentrates observed failures within a smaller very-high-susceptibility footprint.</p>
+</section>
 
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/sikkim-zonation-comparison.png" target="_blank" rel="noopener">
-    <img src="/images/research/sikkim-zonation-comparison.png" alt="Quantitative comparison of area, landslide concentration, and frequency ratio across XGBoost, WSRF, Random Forest, and Logistic Regression susceptibility classes" width="1189" height="948" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Model zonation efficiency.</strong> Comparing landscape area, observed-landslide concentration, and frequency ratio shows why operational usefulness cannot be judged from AUC alone. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
+<section class="research-program-v2" id="gangtok-insar">
+  <header class="research-program-v2__header">
+    <div><p class="eyebrow-v2">GANGTOK · SENTINEL-1 · 2025</p><h2>Multi-Temporal InSAR Deformation Monitoring</h2></div>
+    <p>This project moves the Sikkim research program from <em>where failure is likely</em> to <em>how active slopes are actually moving through time</em>.</p>
+  </header>
 
-### 4. Multi-Temporal InSAR Deformation Monitoring · Gangtok
-A full-year Sentinel-1A deformation study extends susceptibility mapping from *where failure is likely* to *how active slopes are moving through time*.
+  <div class="method-strip-v2"><span>ISCE2 topsStack</span><span>MintPy</span><span>PSInSAR</span><span>SBAS</span><span>Ascending + descending</span></div>
 
-**Data and processing.** **31 ascending** and **24 descending** SLC acquisitions from January-December 2025 were processed with the ISCE2 `topsStack` framework and MintPy. A four-connection nearest-neighbour network generated **114 ascending + 86 descending interferometric pairs**. The final time series contained approximately **6.3 million ascending** and **3.7 million descending** coherent pixels.
+  <div class="research-stage-v2">
+    <div class="research-stage-v2__label"><span>Data & processing</span><h3>Multi-geometry Sentinel-1 time series</h3></div>
+    <div class="research-stage-v2__content">
+      <p><strong>31 ascending</strong> and <strong>24 descending</strong> Sentinel-1A SLC acquisitions spanning January–December 2025 were processed using ISCE2 and MintPy. A four-connection nearest-neighbour network generated <strong>114 ascending + 86 descending interferometric pairs</strong>.</p>
+      <p>The final analyses contained approximately <strong>6.3 million ascending</strong> and <strong>3.7 million descending</strong> coherent pixels. Joint inversion of the two LOS geometries produced horizontal and vertical displacement components, while the time series captured clear acceleration during the June–September monsoon period.</p>
+    </div>
+  </div>
 
-**Deformation results.** Mean LOS velocity fields from the ascending and descending geometries were jointly inverted into horizontal and vertical displacement components. The final PSInSAR maps below show the spatial structure of these velocity fields, while the time-series analysis captures distinct acceleration during the **June-September monsoon**, consistent with seasonal destabilization of active slopes.
+  <div class="research-metrics">
+    <div><strong>55</strong><span>Sentinel-1 scenes</span></div>
+    <div><strong>200</strong><span>interferometric pairs</span></div>
+    <div><strong>~10M</strong><span>coherent pixels</span></div>
+    <div><strong>2</strong><span>motion components</span></div>
+  </div>
 
-<div class="research-metrics" aria-label="Gangtok InSAR study metrics">
-  <div><strong>55</strong><span>Sentinel-1 scenes</span></div>
-  <div><strong>200</strong><span>interferometric pairs</span></div>
-  <div><strong>~10M</strong><span>coherent pixels</span></div>
-  <div><strong>2</strong><span>resolved motion components</span></div>
-</div>
+  <h3 class="figure-group-title-v2">Decomposed surface motion</h3>
+  <div class="research-pair research-pair--portrait">
+    <figure class="research-figure research-figure--panel"><a class="research-figure__link" href="/images/research/gangtok-vertical.png" target="_blank" rel="noopener"><img src="/images/research/gangtok-vertical.png" alt="Vertical PSInSAR displacement velocity map for Gangtok" loading="lazy"></a><figcaption><strong>Vertical displacement velocity.</strong> <span class="figure-hint">Full resolution ↗</span></figcaption></figure>
+    <figure class="research-figure research-figure--panel"><a class="research-figure__link" href="/images/research/gangtok-horizontal.png" target="_blank" rel="noopener"><img src="/images/research/gangtok-horizontal.png" alt="Horizontal PSInSAR displacement velocity map for Gangtok" loading="lazy"></a><figcaption><strong>Horizontal displacement velocity.</strong> <span class="figure-hint">Full resolution ↗</span></figcaption></figure>
+  </div>
 
-<div class="research-pair research-pair--portrait" aria-label="Vertical and horizontal PSInSAR displacement maps">
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/gangtok-vertical.png" target="_blank" rel="noopener">
-      <img src="/images/research/gangtok-vertical.png" alt="Vertical PSInSAR displacement velocity map for the Gangtok region" width="453" height="586" loading="lazy" decoding="async">
-    </a>
-    <figcaption><strong>Vertical displacement velocity.</strong> <span class="figure-hint">Open full resolution ↗</span></figcaption>
+  <h3 class="figure-group-title-v2">Multi-geometry LOS observations</h3>
+  <div class="research-pair research-pair--portrait">
+    <figure class="research-figure research-figure--panel"><a class="research-figure__link" href="/images/research/gangtok-asc-los.png" target="_blank" rel="noopener"><img src="/images/research/gangtok-asc-los.png" alt="Ascending LOS PSInSAR velocity map for Gangtok" loading="lazy"></a><figcaption><strong>Ascending LOS velocity.</strong> <span class="figure-hint">Full resolution ↗</span></figcaption></figure>
+    <figure class="research-figure research-figure--panel"><a class="research-figure__link" href="/images/research/gangtok-dsc-los.png" target="_blank" rel="noopener"><img src="/images/research/gangtok-dsc-los.png" alt="Descending LOS PSInSAR velocity map for Gangtok" loading="lazy"></a><figcaption><strong>Descending LOS velocity.</strong> <span class="figure-hint">Full resolution ↗</span></figcaption></figure>
+  </div>
+
+  <div class="contribution-box-v2"><strong>My contribution</strong><p>All software implementation, InSAR processing, coding, and computational analysis for this study.</p><span>Manuscript ready for submission · Code private during manuscript preparation</span></div>
+</section>
+
+<section class="research-program-v2 research-program-v2--concept" id="geoai-synthetic-data">
+  <header class="research-program-v2__header">
+    <div><p class="eyebrow-v2">GEOAI · RESEARCH IN PROGRESS</p><h2>GCT-TabDDPM / Synthetic Data for Landslide Inventories</h2></div>
+    <p>A methodological project asking when synthetic augmentation genuinely improves spatial modelling and when apparent gains are artefacts of invalid geography or leakage.</p>
+  </header>
+
+  <div class="concept-grid-v2">
+    <div><span>01</span><h3>Geographic consistency</h3><p>Environmental covariates should remain consistent with the geographic locations represented by synthetic samples.</p></div>
+    <div><span>02</span><h3>Leakage-safe evaluation</h3><p>Spatial dependence can make conventional random validation look far stronger than true geographic transfer.</p></div>
+    <div><span>03</span><h3>Downstream utility</h3><p>The central test is not whether samples look realistic, but whether augmentation provides valid and reproducible modelling benefit.</p></div>
+  </div>
+
+  <p>Current work began with GCT-TabDDPM and now includes a broader audit of tabular and geo-conditional generative approaches. Quantitative results are intentionally withheld while the methodology and evaluation framework are being finalized.</p>
+  <div class="contribution-box-v2"><strong>My contribution</strong><p>Independently developed research design, implementation, evaluation framework, and code.</p><span>First-author manuscript in preparation</span></div>
+</section>
+
+<section class="research-program-v2" id="jharia-restoration">
+  <header class="research-program-v2__header">
+    <div><p class="eyebrow-v2">JHARIA COALFIELD · M.TECH THESIS · 2025–2026</p><h2>Mining-Environment Monitoring & Restoration Prioritization</h2></div>
+    <p>A decadal Earth-observation framework designed to identify where ecological restoration is most urgent across a mining landscape affected by long-term extraction and persistent coal-seam fires.</p>
+  </header>
+
+  <div class="research-stage-v2">
+    <div class="research-stage-v2__label"><span>Multi-source EO</span><h3>From degradation signals to intervention priority</h3></div>
+    <div class="research-stage-v2__content">
+      <p>Six degradation indicators were derived from a ten-year archive of <strong>Sentinel-1/2, Landsat-8/9, and VIIRS</strong> observations and summarized using Theil-Sen trend estimation with Mann-Kendall significance testing.</p>
+      <p>The work introduced two indices in the mining context: <strong>Vol-NDVI</strong>, a SAR–optical fusion index for vegetation condition, and <strong>Surface Alteration Surface (SAS)</strong>, developed using PCA. Indicators were integrated through <strong>Fuzzy AHP</strong>.</p>
+    </div>
+  </div>
+
+  <div class="research-metrics">
+    <div><strong>~370 km²</strong><span>study area</span></div>
+    <div><strong>10 years</strong><span>EO archive</span></div>
+    <div><strong>0.8831</strong><span>Moran's I</span></div>
+    <div><strong>0.8355</strong><span>ROC-AUC</span></div>
+  </div>
+
+  <figure class="research-figure research-figure--wide">
+    <a class="research-figure__link" href="/images/research/jharia-rpi.png" target="_blank" rel="noopener"><img src="/images/research/jharia-rpi.png" alt="Restoration Priority Index map for the Jharia Coalfield" loading="lazy"></a>
+    <figcaption><strong>Restoration Priority Index.</strong> The final 10 m product classifies the landscape into low, moderate, high, and critical restoration-priority zones. <span class="figure-hint">Open full resolution ↗</span></figcaption>
   </figure>
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/gangtok-horizontal.png" target="_blank" rel="noopener">
-      <img src="/images/research/gangtok-horizontal.png" alt="Horizontal PSInSAR displacement velocity map for the Gangtok region" width="453" height="586" loading="lazy" decoding="async">
-    </a>
-    <figcaption><strong>Horizontal displacement velocity.</strong> <span class="figure-hint">Open full resolution ↗</span></figcaption>
+
+  <div class="validation-grid-v2">
+    <div><strong>0.8831</strong><span>Spatial autocorrelation · Moran's I</span></div>
+    <div><strong>0.8355</strong><span>Predictive validation · ROC-AUC</span></div>
+    <div><strong>2.56%</strong><span>Monte Carlo coefficient of variation</span></div>
+    <div><strong>77.48%</strong><span>Capture of mapped coal-fire areas</span></div>
+  </div>
+
+  <figure class="research-figure research-figure--wide">
+    <a class="research-figure__link" href="/images/research/jharia-workflow.png" target="_blank" rel="noopener"><img src="/images/research/jharia-workflow.png" alt="Seven-phase workflow for Jharia restoration-priority modelling" loading="lazy"></a>
+    <figcaption><strong>Methodological framework.</strong> Multi-temporal preprocessing, parameter derivation, harmonization, Fuzzy AHP weighting, RPI modelling, priority zonation, and spatial/statistical validation. <span class="figure-hint">Open full resolution ↗</span></figcaption>
   </figure>
-</div>
-<p class="research-pair-caption"><strong>Decomposed surface motion.</strong> Joint inversion of ascending and descending PSInSAR observations resolves horizontal and vertical displacement components across the Gangtok study area.</p>
 
-<div class="research-pair research-pair--portrait" aria-label="Ascending and descending PSInSAR LOS velocity maps">
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/gangtok-asc-los.png" target="_blank" rel="noopener">
-      <img src="/images/research/gangtok-asc-los.png" alt="Ascending line-of-sight PSInSAR velocity map for Gangtok" width="453" height="586" loading="lazy" decoding="async">
-    </a>
-    <figcaption><strong>Ascending LOS velocity.</strong> <span class="figure-hint">Open full resolution ↗</span></figcaption>
-  </figure>
-  <figure class="research-figure research-figure--panel">
-    <a class="research-figure__link" href="/images/research/gangtok-dsc-los.png" target="_blank" rel="noopener">
-      <img src="/images/research/gangtok-dsc-los.png" alt="Descending line-of-sight PSInSAR velocity map for Gangtok" width="453" height="586" loading="lazy" decoding="async">
-    </a>
-    <figcaption><strong>Descending LOS velocity.</strong> <span class="figure-hint">Open full resolution ↗</span></figcaption>
-  </figure>
-</div>
-<p class="research-pair-caption"><strong>Multi-geometry LOS deformation.</strong> Ascending and descending Sentinel-1 observations provide complementary views of spatially variable ground motion before component decomposition.</p>
+  <div class="contribution-box-v2"><strong>My contribution</strong><p>Full research workflow: research design, data acquisition and processing, index development, weighting, coding, validation, interpretation, and manuscript preparation, under the supervision of Prof. Dheeraj Kumar.</p><span>First-author manuscript under review · Science of Remote Sensing</span></div>
+</section>
 
-**Research contribution:** all software implementation, InSAR processing, coding, and computational analysis for this study.
+<section class="research-program-v2" id="other-earth-observation">
+  <header class="research-program-v2__header"><div><p class="eyebrow-v2">ADDITIONAL RESEARCH</p><h2>Other Earth-observation & collaborative work</h2></div><p>Supporting projects that broaden my experience across hyperspectral sensing, groundwater assessment, and coastal risk.</p></header>
 
-**Output:** Manuscript ready for submission. Code is currently private during manuscript preparation.
+  <div class="supporting-project-grid-v2">
+    <article class="supporting-project-v2">
+      <div class="supporting-project-v2__image supporting-project-v2__image--portrait"><a href="/images/research/hyperspectral-mineral-map.png" target="_blank" rel="noopener"><img src="/images/research/hyperspectral-mineral-map.png" alt="Hyperion hyperspectral mineral classification map" loading="lazy"></a></div>
+      <div><span class="project-type-v2">INDEPENDENT RESEARCH · 2025</span><h3>Hyperspectral Mineral Mapping · Bailadila</h3><p>EO-1 Hyperion processing using FLAASH atmospheric correction, PCA/MNF dimensionality reduction, and Spectral Angle Mapper classification for hematite, pyrite, and quartz-associated signatures.</p></div>
+    </article>
 
----
+    <article class="supporting-project-v2">
+      <div class="supporting-project-v2__image"><a href="/images/research/groundwater-lr.png" target="_blank" rel="noopener"><img src="/images/research/groundwater-lr.png" alt="Groundwater potential zonation map for Purulia" loading="lazy"></a></div>
+      <div><span class="project-type-v2">COLLABORATIVE · UNDER REVIEW</span><h3>Groundwater Potential Zonation · Purulia</h3><p>AHP, Frequency Ratio, Logistic Regression, and Random Forest benchmarked against <strong>66 verified wells</strong>. Data-driven models (AUC ≈ 0.75) outperformed the expert-weighted AHP baseline (AUC ≈ 0.67).</p><a class="text-link-v2" href="/images/research/groundwater-roc.png" target="_blank">View model ROC comparison ↗</a></div>
+    </article>
 
-## GCT-TabDDPM / Synthetic Data for Landslide Inventories
+    <article class="supporting-project-v2 supporting-project-v2--wide">
+      <div class="supporting-project-v2__image"><a href="/images/research/sagar-flood-risk.jpg" target="_blank" rel="noopener"><img src="/images/research/sagar-flood-risk.jpg" alt="Flood hazard, vulnerability, and risk maps for Sagar Island" loading="lazy"></a></div>
+      <div><span class="project-type-v2">COLLABORATIVE · BOOK CHAPTER IN PRESS</span><h3>Integrated Coastal Flood Risk · Sagar Island</h3><p>Physical flood hazard and census-based socioeconomic vulnerability integrated through a multi-criteria GIS framework to identify priority intervention zones in the Indian Sundarbans.</p></div>
+    </article>
+  </div>
+</section>
 
-*Research in progress · Apr 2026 - present*
-
-Current work investigates whether synthetic-data augmentation can improve landslide modelling **without breaking the geographic relationship between locations and environmental covariates**. The project began with GCT-TabDDPM and now includes a broader methodological audit of tabular and geo-conditional generative approaches.
-
-The central concern is that apparently realistic synthetic samples may still be geographically invalid or may inflate downstream performance through spatial leakage. The research therefore emphasizes **constraint validity, raster-consistent covariates, leakage-safe spatial evaluation, and downstream utility**, rather than treating synthetic-data generation as an end in itself.
-
-**Research contribution:** independently developed research design, implementation, evaluation framework, and code. Quantitative results are still being finalized, so preliminary performance claims are intentionally not reported here.
-
-**Output:** Manuscript in preparation. Code will be released after the research workflow is finalized.
-
----
-
-## Mining-Environment Monitoring and Restoration Prioritization
-
-*Jharia Coalfield, India · Jan 2025 - Apr 2026 · M.Tech Thesis*
-
-I developed a decadal restoration-prioritization framework for the **~370 km² Jharia Coalfield**, a landscape affected by long-term mining and persistent coal-seam fires.
-
-**Data fusion.** Six degradation indicators were derived from a ten-year archive of **Sentinel-1/2, Landsat-8/9, and VIIRS** observations and summarized using Theil-Sen trend estimation with Mann-Kendall significance testing.
-
-**Novel indices in the mining context.**
-- **Vol-NDVI** - a SAR-optical fusion index designed to improve characterization of vegetation condition.
-- **Surface Alteration Surface (SAS)** - a mining-surface alteration indicator developed using PCA.
-
-<div class="research-metrics" aria-label="Jharia restoration study metrics">
-  <div><strong>~370 km²</strong><span>study area</span></div>
-  <div><strong>10 years</strong><span>EO archive</span></div>
-  <div><strong>0.8831</strong><span>Moran's I</span></div>
-  <div><strong>0.8355</strong><span>ROC-AUC</span></div>
-</div>
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/jharia-rpi.png" target="_blank" rel="noopener">
-    <img src="/images/research/jharia-rpi.png" alt="Restoration Priority Index map of the Jharia Coalfield with low, moderate, high, and critical priority zones" width="1379" height="1034" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Restoration Priority Index for the Jharia Coalfield.</strong> Multi-source Earth-observation indicators were integrated to classify the mining landscape into low, moderate, high, and critical restoration-priority zones. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
-**Integration and validation.** The six indicators were weighted using **Fuzzy AHP**. The resulting Restoration Priority Index was evaluated using four complementary checks:
-- **Moran's I = 0.8831**
-- **ROC-AUC = 0.8355**
-- **Monte Carlo CV = 2.56%**
-- **77.48%** capture of independently mapped coal-fire areas
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/jharia-workflow.png" target="_blank" rel="noopener">
-    <img src="/images/research/jharia-workflow.png" alt="Seven-phase methodological workflow for Jharia restoration-priority modelling from satellite preprocessing through decision framework" width="1379" height="931" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Methodological framework.</strong> The workflow integrates multi-temporal satellite preprocessing, parameter derivation, harmonization, Fuzzy AHP weighting, RPI modelling, priority zonation, and statistical/spatial validation. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
-The final product is a **10 m restoration-priority map** designed to identify both where intervention is most urgent and the degradation factors contributing to that priority.
-
-**Research contribution:** I carried out the full research workflow, including research design, data acquisition and processing, index development, weighting, coding, validation, interpretation, and manuscript preparation, under the supervision of **Prof. Dheeraj Kumar**.
-
-**Output:** First-author manuscript under review at *Science of Remote Sensing*. Code repository will be made public after the publication process permits release.
-
----
-
-## Hyperspectral Mineral Mapping
-
-*Bailadila Iron Ore Mine · Summer 2025 · Independent research*
-
-A self-directed EO-1 Hyperion workflow exploring spaceborne hyperspectral methods for mineral mapping. Processing in ENVI included **FLAASH atmospheric correction, PCA/MNF dimensionality reduction, and Spectral Angle Mapper classification** to characterize hematite, pyrite, and quartz-associated signatures.
-
-This project broadened my methodological experience from environmental and hazard mapping toward **spectral characterization for resource exploration**.
-
-<figure class="research-figure research-figure--portrait">
-  <a class="research-figure__link" href="/images/research/hyperspectral-mineral-map.png" target="_blank" rel="noopener">
-    <img src="/images/research/hyperspectral-mineral-map.png" alt="Mineral classification map derived from EO-1 Hyperion hyperspectral imagery" width="543" height="765" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Hyperspectral mineral classification.</strong> Spectral Angle Mapper output showing mapped mineral signatures from the Hyperion scene. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
----
-
-## Additional Collaborative Research
-
-### Groundwater Potential Zonation · Purulia, West Bengal
-Benchmarked AHP, Frequency Ratio, Logistic Regression, and Random Forest against **66 verified well observations** in hard-rock aquifers of the Chota Nagpur Plateau. Data-driven models (**AUC ≈ 0.75**) outperformed expert weighting (**AUC ≈ 0.67**). Manuscript under review.
-
-<div class="research-metrics research-metrics--compact" aria-label="Groundwater modelling metrics">
-  <div><strong>66</strong><span>verified wells</span></div>
-  <div><strong>4</strong><span>models compared</span></div>
-  <div><strong>0.753</strong><span>best ROC-AUC</span></div>
-</div>
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/groundwater-roc.png" target="_blank" rel="noopener">
-    <img src="/images/research/groundwater-roc.png" alt="ROC curves comparing AHP, Frequency Ratio, Logistic Regression, and Random Forest groundwater-potential models" width="1880" height="1586" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Predictive model comparison.</strong> Logistic Regression and Random Forest provide the strongest discrimination, outperforming the deterministic AHP baseline. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/groundwater-lr.png" target="_blank" rel="noopener">
-    <img src="/images/research/groundwater-lr.png" alt="Logistic Regression groundwater potential zonation map for Purulia, West Bengal" width="2068" height="1551" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Groundwater potential zonation.</strong> Logistic Regression maps spatial variation in groundwater potential across the study area's hard-rock aquifer system. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
-### Integrated Coastal Flood Risk Assessment · Sagar Island
-Co-authored a framework combining remotely sensed exposure indicators with census-based socioeconomic vulnerability to identify priority intervention zones in the Indian Sundarbans. Book chapter in press with Springer.
-
-<figure class="research-figure research-figure--wide">
-  <a class="research-figure__link" href="/images/research/sagar-flood-risk.jpg" target="_blank" rel="noopener">
-    <img src="/images/research/sagar-flood-risk.jpg" alt="Three-panel Sagar Island maps showing flood hazard, flood vulnerability, and integrated flood risk" width="1379" height="839" loading="lazy" decoding="async">
-  </a>
-  <figcaption><strong>Integrated coastal flood-risk assessment.</strong> Physical flood hazard and socioeconomic vulnerability are combined through a multi-criteria GIS framework to reveal the spatial pattern of composite flood risk. <span class="figure-hint">Open full resolution ↗</span></figcaption>
-</figure>
-
----
-
-## Methodological Interests
-
-**InSAR & deformation:** Sentinel-1, ISCE2, MintPy, PSInSAR, SBAS, multi-geometry decomposition  
-**GeoAI & machine learning:** XGBoost, random forests, spatial cross-validation, PyTorch, generative models  
-**Earth observation:** optical, SAR, thermal, nighttime-light, and hyperspectral sensing  
-**Spatial analysis:** Fuzzy AHP, Moran's I, Getis-Ord Gi*, Theil-Sen, Mann-Kendall, Monte Carlo sensitivity analysis
+<section class="methods-band-v2">
+  <p class="eyebrow-v2">METHODS & TOOLS</p>
+  <div><strong>InSAR</strong><span>Sentinel-1 · ISCE2 · MintPy · PSInSAR · SBAS</span></div>
+  <div><strong>GeoAI</strong><span>XGBoost · Random Forest · PyTorch · generative models · spatial CV</span></div>
+  <div><strong>Earth observation</strong><span>Optical · SAR · thermal · nighttime light · hyperspectral</span></div>
+  <div><strong>Spatial analysis</strong><span>Fuzzy AHP · Moran's I · Getis-Ord Gi* · Theil-Sen · Mann-Kendall</span></div>
+</section>
