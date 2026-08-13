@@ -21,17 +21,63 @@ A GIS-MCDM framework integrated **14 geo-environmental conditioning factors** af
 ### 2. Deterministic, statistical, and hybrid model comparison
 A subsequent study compared **AHP, Frequency Ratio, AHP-FR, and Logistic Regression** using an inventory of **211 landslides**. The hybrid AHP-FR model achieved the strongest overall predictive performance (**success AUC = 0.85; prediction AUC = 0.81**), with sensitivity of **0.79** and strong spatial reliability.
 
+<div class="research-metrics" aria-label="Published landslide study metrics">
+  <div><strong>211</strong><span>mapped landslides</span></div>
+  <div><strong>14</strong><span>conditioning factors</span></div>
+  <div><strong>0.85</strong><span>success AUC</span></div>
+  <div><strong>0.81</strong><span>prediction AUC</span></div>
+</div>
+
+<figure class="research-figure">
+  <img src="/images/research/sikkim-inventory-field.webp" alt="Sikkim landslide inventory map flanked by two field-observed landslides" width="1030" height="600" loading="lazy" decoding="async">
+  <figcaption><strong>Landslide inventory and field assessment in Sikkim.</strong> Spatially mapped landslide occurrences were combined with imagery- and field-based verification to develop and validate susceptibility models across the Himalayan terrain.</figcaption>
+</figure>
+
 **Output:** Peer-reviewed article in *Earth Surface Processes and Landforms* (2026). [See Publications →](/publications/)
 
 ### 3. Ensemble learning with spatial validation
 The next stage benchmarked **Logistic Regression, Random Forest, Weighted Subspace Random Forest (WSRF), and XGBoost** using **677 landslides** and **five-fold spatial cross-validation**. XGBoost achieved the highest discriminative capability (**AUC = 0.895; sensitivity = 0.955**), while WSRF provided better zonation efficiency, capturing **84.5% of landslides within 28.2% of the study area**. Partial-dependence analysis identified a pronounced instability transition around **25°-30° slope**.
+
+<div class="research-metrics" aria-label="Ensemble landslide modelling metrics">
+  <div><strong>677</strong><span>landslides</span></div>
+  <div><strong>0.895</strong><span>XGBoost AUC</span></div>
+  <div><strong>0.955</strong><span>XGBoost sensitivity</span></div>
+  <div><strong>3.00</strong><span>WSRF frequency ratio</span></div>
+</div>
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/sikkim-xgboost-wsrf.webp" alt="Side-by-side XGBoost and WSRF landslide susceptibility maps for Sikkim" width="1500" height="593" loading="lazy" decoding="async">
+  <figcaption><strong>Contrasting susceptibility zonation.</strong> XGBoost provides the strongest predictive discrimination, whereas WSRF achieves greater spatial economy by concentrating observed failures within a smaller very-high-susceptibility footprint.</figcaption>
+</figure>
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/sikkim-zonation-comparison.webp" alt="Quantitative comparison of area, landslide concentration, and frequency ratio across XGBoost, WSRF, Random Forest, and Logistic Regression susceptibility classes" width="1500" height="1071" loading="lazy" decoding="async">
+  <figcaption><strong>Model zonation efficiency.</strong> Comparing landscape area, observed-landslide concentration, and frequency ratio shows why operational usefulness cannot be judged from AUC alone.</figcaption>
+</figure>
 
 ### 4. Multi-Temporal InSAR Deformation Monitoring · Gangtok
 A full-year Sentinel-1A deformation study extends susceptibility mapping from *where failure is likely* to *how active slopes are moving through time*.
 
 **Data and processing.** **31 ascending** and **24 descending** SLC acquisitions from January-December 2025 were processed with the ISCE2 `topsStack` framework and MintPy. A four-connection nearest-neighbour network generated **114 ascending + 86 descending interferometric pairs**. The final time series contained approximately **6.3 million ascending** and **3.7 million descending** coherent pixels.
 
-**Deformation results.** LOS velocities range from **-15.8 to +41.8 cm/yr** in ascending geometry and **-19.9 to +10.2 cm/yr** in descending geometry. Joint inversion decomposed the observations into an east-west component (**-41.2 to +18.3 cm/yr**) and a vertical component (**-22.3 to +25.7 cm/yr**). Time-series analysis captures distinct acceleration during the **June-September monsoon**, consistent with seasonal destabilization of active slopes.
+**Deformation results.** Mean LOS velocity fields from the ascending and descending geometries were jointly inverted into horizontal and vertical displacement components. The final PSInSAR maps below show the spatial structure of these velocity fields, while the time-series analysis captures distinct acceleration during the **June-September monsoon**, consistent with seasonal destabilization of active slopes.
+
+<div class="research-metrics" aria-label="Gangtok InSAR study metrics">
+  <div><strong>55</strong><span>Sentinel-1 scenes</span></div>
+  <div><strong>200</strong><span>interferometric pairs</span></div>
+  <div><strong>~10M</strong><span>coherent pixels</span></div>
+  <div><strong>2</strong><span>resolved motion components</span></div>
+</div>
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/gangtok-decomposition.webp" alt="Side-by-side horizontal and vertical PSInSAR displacement velocity maps for the Gangtok region" width="930" height="638" loading="lazy" decoding="async">
+  <figcaption><strong>Decomposed surface motion.</strong> Joint inversion of ascending and descending PSInSAR observations resolves horizontal and vertical displacement components across the Gangtok study area.</figcaption>
+</figure>
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/gangtok-los.webp" alt="Side-by-side ascending and descending line-of-sight PSInSAR velocity maps for Gangtok" width="930" height="638" loading="lazy" decoding="async">
+  <figcaption><strong>Multi-geometry LOS deformation.</strong> Ascending and descending Sentinel-1 observations provide complementary views of spatially variable ground motion before component decomposition.</figcaption>
+</figure>
 
 **Research contribution:** all software implementation, InSAR processing, coding, and computational analysis for this study.
 
@@ -65,11 +111,28 @@ I developed a decadal restoration-prioritization framework for the **~370 km² J
 - **Vol-NDVI** - a SAR-optical fusion index designed to improve characterization of vegetation condition.
 - **Surface Alteration Surface (SAS)** - a mining-surface alteration indicator developed using PCA.
 
+<div class="research-metrics" aria-label="Jharia restoration study metrics">
+  <div><strong>~370 km²</strong><span>study area</span></div>
+  <div><strong>10 years</strong><span>EO archive</span></div>
+  <div><strong>0.8831</strong><span>Moran's I</span></div>
+  <div><strong>0.8355</strong><span>ROC-AUC</span></div>
+</div>
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/jharia-rpi.webp" alt="Restoration Priority Index map of the Jharia Coalfield with low, moderate, high, and critical priority zones" width="1379" height="1034" loading="lazy" decoding="async">
+  <figcaption><strong>Restoration Priority Index for the Jharia Coalfield.</strong> Multi-source Earth-observation indicators were integrated to classify the mining landscape into low, moderate, high, and critical restoration-priority zones.</figcaption>
+</figure>
+
 **Integration and validation.** The six indicators were weighted using **Fuzzy AHP**. The resulting Restoration Priority Index was evaluated using four complementary checks:
 - **Moran's I = 0.8831**
 - **ROC-AUC = 0.8355**
 - **Monte Carlo CV = 2.56%**
 - **77.48%** capture of independently mapped coal-fire areas
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/jharia-workflow.webp" alt="Seven-phase methodological workflow for Jharia restoration-priority modelling from satellite preprocessing through decision framework" width="1379" height="931" loading="lazy" decoding="async">
+  <figcaption><strong>Methodological framework.</strong> The workflow integrates multi-temporal satellite preprocessing, parameter derivation, harmonization, Fuzzy AHP weighting, RPI modelling, priority zonation, and statistical/spatial validation.</figcaption>
+</figure>
 
 The final product is a **10 m restoration-priority map** designed to identify both where intervention is most urgent and the degradation factors contributing to that priority.
 
@@ -92,10 +155,31 @@ This project broadened my methodological experience from environmental and hazar
 ## Additional Collaborative Research
 
 ### Groundwater Potential Zonation · Purulia, West Bengal
-Benchmarked AHP, Frequency Ratio, Logistic Regression, and Random Forest against **66 verified well observations** in hard-rock aquifers of the Chota Nagpur Plateau. Data-driven models (**AUC = 0.75**) outperformed expert weighting (**AUC = 0.66**). Manuscript under review.
+Benchmarked AHP, Frequency Ratio, Logistic Regression, and Random Forest against **66 verified well observations** in hard-rock aquifers of the Chota Nagpur Plateau. Data-driven models (**AUC ≈ 0.75**) outperformed expert weighting (**AUC ≈ 0.67**). Manuscript under review.
+
+<div class="research-metrics research-metrics--compact" aria-label="Groundwater modelling metrics">
+  <div><strong>66</strong><span>verified wells</span></div>
+  <div><strong>4</strong><span>models compared</span></div>
+  <div><strong>0.753</strong><span>best ROC-AUC</span></div>
+</div>
+
+<figure class="research-figure">
+  <img src="/images/research/groundwater-roc.webp" alt="ROC curves comparing AHP, Frequency Ratio, Logistic Regression, and Random Forest groundwater-potential models" width="1300" height="1097" loading="lazy" decoding="async">
+  <figcaption><strong>Predictive model comparison.</strong> Logistic Regression and Random Forest provide the strongest discrimination, outperforming the deterministic AHP baseline.</figcaption>
+</figure>
+
+<figure class="research-figure">
+  <img src="/images/research/groundwater-lr.webp" alt="Logistic Regression groundwater potential zonation map for Purulia, West Bengal" width="1300" height="975" loading="lazy" decoding="async">
+  <figcaption><strong>Groundwater potential zonation.</strong> Logistic Regression maps spatial variation in groundwater potential across the study area's hard-rock aquifer system.</figcaption>
+</figure>
 
 ### Integrated Coastal Flood Risk Assessment · Sagar Island
 Co-authored a framework combining remotely sensed exposure indicators with census-based socioeconomic vulnerability to identify priority intervention zones in the Indian Sundarbans. Book chapter in press with Springer.
+
+<figure class="research-figure research-figure--wide">
+  <img src="/images/research/sagar-flood-risk.webp" alt="Three-panel Sagar Island maps showing flood hazard, flood vulnerability, and integrated flood risk" width="1300" height="791" loading="lazy" decoding="async">
+  <figcaption><strong>Integrated coastal flood-risk assessment.</strong> Physical flood hazard and socioeconomic vulnerability are combined through a multi-criteria GIS framework to reveal the spatial pattern of composite flood risk.</figcaption>
+</figure>
 
 ---
 
