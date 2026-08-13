@@ -1,1 +1,0 @@
-Preparing original-resolution research image deployment from user-supplied folder.
