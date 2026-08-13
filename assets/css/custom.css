@@ -105,7 +105,6 @@ blockquote {
 .page__footer { background: #f4f7f4; border-top: 1px solid var(--line); }
 .page__footer a { color: var(--accent) !important; }
 
-
 /* Mobile */
 @media (max-width: 760px) {
   .academic-snapshot { grid-template-columns: 1fr; }
@@ -117,7 +116,6 @@ blockquote {
   .masthead, .sidebar, .page__footer, .btn, .home-actions { display: none !important; }
   .page__content { max-width: 100%; font-size: 10pt; }
 }
-
 
 /* Research figures and metrics */
 .research-metrics {
@@ -152,10 +150,21 @@ blockquote {
 
 .research-figure {
   margin: 1.35rem auto 1.8rem;
-  max-width: 880px;
+  max-width: 980px;
 }
 .research-figure--wide {
-  max-width: 1040px;
+  max-width: 1180px;
+}
+.research-figure--portrait {
+  max-width: 640px;
+}
+.research-figure--panel {
+  max-width: none;
+  margin: 0;
+}
+.research-figure__link {
+  display: block;
+  text-decoration: none;
 }
 .research-figure img {
   display: block;
@@ -166,15 +175,41 @@ blockquote {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 18px rgba(31, 64, 41, 0.06);
+  cursor: zoom-in;
 }
-.research-figure figcaption {
+.research-figure figcaption,
+.research-pair-caption {
   color: var(--muted);
   font-size: 0.84em;
   line-height: 1.5;
+}
+.research-figure figcaption {
   margin: 0.55rem 0.25rem 0;
 }
-.research-figure figcaption strong {
+.research-figure figcaption strong,
+.research-pair-caption strong {
   color: #46514a;
+}
+.figure-hint {
+  white-space: nowrap;
+  color: var(--accent);
+  font-size: 0.93em;
+}
+.research-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 1.35rem auto 0.6rem;
+  max-width: 1180px;
+}
+.research-pair--portrait {
+  max-width: 900px;
+  gap: 1.25rem;
+}
+.research-pair-caption {
+  max-width: 1040px;
+  margin: 0.25rem auto 1.8rem;
 }
 
 /* Field-context profile portrait */
@@ -191,11 +226,24 @@ blockquote {
   .research-metrics--compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .research-pair,
+  .research-pair--portrait {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
   .research-figure,
-  .research-figure--wide {
+  .research-figure--wide,
+  .research-figure--portrait {
     margin: 1rem 0 1.45rem;
   }
-  .research-figure figcaption {
+  .research-figure--panel {
+    margin: 0;
+  }
+  .research-pair-caption {
+    margin: 0.35rem 0 1.55rem;
+  }
+  .research-figure figcaption,
+  .research-pair-caption {
     font-size: 0.8em;
   }
 }
